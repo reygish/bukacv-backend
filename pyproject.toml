@@ -9,3 +9,10 @@ dependencies = [
   "opencv-python-headless>=4.9,<5.0",
   "img2pdf>=0.5,<1.0"
 ]
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# Explicitly discover packages but drop the local development/testing clutter
+packages = { find = { exclude = ["testing*", "performance_analysis*"] } }
