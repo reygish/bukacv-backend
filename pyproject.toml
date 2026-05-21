@@ -1,0 +1,11 @@
+[project]
+name = "bukacv-document-scanner"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "flask>=3.1,<4.0",
+  "gunicorn~=23.0.0",
+  "numpy>=1.26,<3.0",
+  "opencv-python-headless>=4.9,<5.0",
+  "img2pdf>=0.5,<1.0"
+]
