@@ -69,10 +69,10 @@ def lighten_document_image():
     )
 
 PDF_STORAGE_FOLDER = 'downloads'
-os.makedirs(PDF_STORAGE_FOLDER, exist_ok=True)
 
 @api_bp.route("/pdf", methods=["POST"])
 def save_as_pdf():
+    os.makedirs(PDF_STORAGE_FOLDER, exist_ok=True)
     files = request.files.getlist('images')
     
     if not files or files[0].filename == '':
