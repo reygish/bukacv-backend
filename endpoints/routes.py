@@ -80,7 +80,7 @@ def save_as_pdf():
 
     try:
         image_bytes_list = [file.stream.read() for file in files]
-        pdf_bytes = img2pdf.convert(image_bytes_list)
+        pdf_bytes = img2pdf.convert(image_bytes_list, rotation=img2pdf.Rotation.ifvalid)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"bukacv_{timestamp}.pdf"
